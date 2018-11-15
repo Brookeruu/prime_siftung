@@ -4,6 +4,7 @@ def prime_sifting(number)
   array.delete_if {|a| a %3 == 0}
   array.delete_if {|a| a %5 == 0}
   array.delete_if {|a| a %7 == 0}
+  array.delete_if {|a| Math.sqrt(a).floor() >= Math.sqrt(a)}
   array.insert(0, 2, 3, 5, 7)
 end
 
